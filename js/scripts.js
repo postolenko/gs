@@ -21,28 +21,67 @@ function getCirclesPosition() {
 	});
 }
 
-var map;
-var marker;
-// var image = "img/map_marker.png";
-var styles;	
 
 function initMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 55.882593, lng: 37.5477503},
-		scrollwheel: false,
-		scaleControl: false,
-		zoom: 16
-	});
-	marker = new google.maps.Marker({
-		map: map,
-		draggable: false,
-		animation: google.maps.Animation.DROP,
-		position: {lat: 55.882593, lng: 37.5477503},
-		map: map,
-		// icon: image,
-		title: ''
-	});
-	marker.addListener('click', toggleBounce);
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 55.9326812, lng:   37.7428077},
+    zoom: 16,
+    zoomControl: false,
+    scaleControl: false,
+    fullscreenControl: false,
+    mapTypeControl: false,
+    streetViewControl: false
+  });
+
+  Popup = createPopupClass();
+  popup = new Popup(
+      new google.maps.LatLng(55.9326812, 37.7428077),
+      document.getElementById('content'));
+  popup.setMap(map);
+}
+
+
+function createPopupClass() {
+  function Popup(position, content) {
+    this.position = position;
+    content.classList.add('popup-bubble');
+    var bubbleAnchor = document.createElement('div');
+    bubbleAnchor.classList.add('popup-bubble-anchor');
+    bubbleAnchor.appendChild(content);
+    this.containerDiv = document.createElement('div');
+    this.containerDiv.classList.add('popup-container');
+    this.containerDiv.appendChild(bubbleAnchor);
+    google.maps.OverlayView.preventMapHitsAndGesturesFrom(this.containerDiv);
+  }
+
+  Popup.prototype = Object.create(google.maps.OverlayView.prototype);
+
+  Popup.prototype.onAdd = function() {
+    this.getPanes().floatPane.appendChild(this.containerDiv);
+  };
+
+  Popup.prototype.onRemove = function() {
+    if (this.containerDiv.parentElement) {
+      this.containerDiv.parentElement.removeChild(this.containerDiv);
+    }
+  };
+
+  Popup.prototype.draw = function() {
+    var divPosition = this.getProjection().fromLatLngToDivPixel(this.position);
+    var display =
+        Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
+        'block' :
+        'none';
+    if (display === 'block') {
+      this.containerDiv.style.left = divPosition.x + 'px';
+      this.containerDiv.style.top = divPosition.y + 'px';
+    }
+    if (this.containerDiv.style.display !== display) {
+      this.containerDiv.style.display = display;
+    }
+  };
+
+  return Popup;
 }
 
 function toggleBounce() {

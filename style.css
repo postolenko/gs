@@ -2727,18 +2727,91 @@ p.italic {
 .map_box {
     height: 540px;
     margin: 11px 0 8px 0;
-    position: relative;
+    overflow: hidden;
 }
 
 #map {
     width: 100%;
-    height: 540px;
-    position: absolute;
+    height: 627px;
+    position: relative;
     top: 0;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+}
+
+.popup-bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -100%);
+    background-color: white;
+    padding: 11px 17px;
+    border-radius: 17px;
+    max-height: 74px;
+    width: 340px;
+    -webkit-box-shadow: 0 6px 10px 1px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 6px 10px 1px rgba(0,0,0,.3);
+    box-shadow: 0 6px 10px 1px rgba(0,0,0,.3);
+    font-family: "Din Pro";
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A3939;
+    text-align: right;
+}
+
+.rommb {
+    width: 96px;
+    height: 96px;
+    background-color: #444444;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -11px;
+    left: -26px;
+    -webkit-box-shadow: -4px 4px 6px 0px rgba(0,0,0,.3);
+    -moz-box-shadow: -4px 4px 6px 0px rgba(0,0,0,.3);
+    box-shadow: -4px 4px 6px 0px rgba(0,0,0,.3);
+}
+
+.rommb img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 84%;
+    max-height: 84%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 16px;
+    left: 10px;
+}
+
+.contetn_text {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.popup-bubble-anchor {
+    position: absolute;
+    width: 100%;
+    bottom: 8px;
+    left: 0;
+}
+
+.popup-container {
+    cursor: auto;
+    height: 0;
+    position: absolute;
+    width: 340px;
+}
+
+img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
+    display: none;
 }
 
 /*-- /Section 1 - Contacts Page --*/
