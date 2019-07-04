@@ -90,7 +90,17 @@ function toggleBounce() {
   }
 }
 
-
+function getWrappPadding() {
+    if (bodyWidth <= 900) {
+        $(".wrapper").css({
+            "padding-top" : $(".header_site").height() + "px"
+        });
+    } else {
+        $(".wrapper").css({
+            "padding-top" : 0
+        });
+    }
+}
 
 $(window).load(function() {
 
@@ -101,9 +111,11 @@ $(window).load(function() {
 });
 
 $(window).resize(function() {
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
     setTimeout(function() {
         getCirclesPosition();
     }, 200);
+    getWrappPadding();
 });
 
 $(document).scroll(function() {
@@ -113,6 +125,8 @@ $(document).scroll(function() {
 });
 
 $(document).ready(function() {
+
+    getWrappPadding();
 
 	$(".main_nav > li").each(function() {
 		$(this).find("ul").addClass("sub_menu");
@@ -223,7 +237,7 @@ $(document).ready(function() {
 
     // -- Card Slider
 
-    if($(".big_slider").length && $(".miniature_slider").length ) {
+    if($(".big_slider").length> 0 && $(".miniature_slider").length> 0 ) {
 
         $('.big_slider').slick({
             slidesToShow: 1,
@@ -231,13 +245,13 @@ $(document).ready(function() {
             dots: false,
             arrows: false,
             fade: true,
-            asNavFor: '.miniature_slider'
+            asNavFor: $('.miniature_slider')
         });
 
         $('.miniature_slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
-            asNavFor: '.big_slider',
+            asNavFor: $('.big_slider'),
             dots: false,
             arrows: false,
             vertical: true,
@@ -249,20 +263,24 @@ $(document).ready(function() {
                 {
                   breakpoint: 900,
                   settings: {
-                    slidesToShow: 10,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    vertical: false,
+                    verticalSwiping: false,
+                    // focusOnSelect: false,
+                    arrows: true
+                  }
+                },
+                {
+                  breakpoint: 620,
+                  settings: {
+                    slidesToShow: 5,
                     slidesToScroll: 1,
                     vertical: false,
                     verticalSwiping: false,
                     arrows: true
                   }
                 }
-                // {
-                //   breakpoint: 620,
-                //   settings: {
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1
-                //   }
-                // }
             ]
         });
 

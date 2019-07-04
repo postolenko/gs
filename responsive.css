@@ -547,7 +547,7 @@
 	    float: none;
 	    max-width: 600px;
 		margin: 0 auto;
-	    padding: 10px 0;
+	    padding: 0;
 	}
 
 	.big_slider {
@@ -555,11 +555,17 @@
 	}
 
 	.big_slider .slide .img_box {
-	    height: 400px;
+	    height: 360px;
 	}
 
 	.miniature_slider .slide .miniature {
 		margin: 0 auto;
+	}
+
+	.miniature_slider .slick-arrow {
+		background: rgba(0, 0, 0, .8);
+		top: 0;
+    	margin-top: -56px;
 	}
 
 	.good_descript {
@@ -592,6 +598,29 @@
 	}
 
 	/*-- /Section 3 - Card Page --*/
+
+	/*- Popups --*/
+
+	.contact_form_2 {
+		width: 80% !important;
+	    max-width: 430px !important;
+	    padding: 25px 25px 20px 25px;
+	}
+
+	.contact_form h3 {
+	    font-size: 20px;
+	    line-height: 24px;
+	}
+
+	.submit_wrapp .yellow_pill {
+		margin: 0;
+	}
+
+	.popup_wrapp .close_btn {
+		right: 3%;
+	}
+
+	/*- /Popups --*/
 
 }
 
@@ -1058,6 +1087,10 @@
 	    top: 0;
 	}
 
+	.breadcrumbs li:after {
+	    top: 0;
+	}
+
 	/*-- Header --*/
 
 	.header_col .inline_blocks .inline:nth-child(1) {
@@ -1166,6 +1199,14 @@
 	}
 
 	/*-- /Section 1 - News Page --*/
+
+	/*-- Section 1 - Card Page --*/
+
+	.big_slider .slide .img_box {
+	    height: 240px;
+	}
+
+	/*-- /Section 1 - Card Page --*/
 
 	/*-- Section 3 - Card Page --*/
 
@@ -1373,6 +1414,15 @@
 	}
 
 	/*-- /Section 3 - Card Page --*/
+
+	/*-- Popups --*/
+
+	.contact_form_2 {
+	    width: 94% !important;
+	    padding: 25px 15px 20px 15px;
+	}
+
+	/*-- /Popups --*/
 
 }
 

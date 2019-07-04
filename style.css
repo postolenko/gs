@@ -3658,6 +3658,7 @@ body.fixed {
 
 .popup_wrapp {
     max-width: 630px;
+    min-height: 100%;
     margin: 0 auto;
     position: relative;
 }
@@ -3675,6 +3676,7 @@ body.fixed {
     background-color: #FFFFFF;
     border-color: #E5E5E5;
     margin: 0 auto;
+    float: none;
     padding: 70px 11% 30px 11%;
 }
 
