@@ -280,6 +280,16 @@ $(document).ready(function() {
                     verticalSwiping: false,
                     arrows: true
                   }
+                },
+                {
+                  breakpoint: 440,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    vertical: false,
+                    verticalSwiping: false,
+                    arrows: true
+                  }
                 }
             ]
         });
