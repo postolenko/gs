@@ -601,9 +601,14 @@
 
 	/*- Popups --*/
 
-	.contact_form_2 {
-		width: 80% !important;
+	.popup_wrapp {
+	    width: 80% !important;
 	    max-width: 430px !important;
+	    margin: 0 auto;
+	    position: relative;
+	}
+
+	.contact_form_2 {
 	    padding: 25px 25px 20px 25px;
 	}
 
@@ -617,7 +622,7 @@
 	}
 
 	.popup_wrapp .close_btn {
-		right: 3%;
+		right: 0;
 	}
 
 	/*- /Popups --*/
