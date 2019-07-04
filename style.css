@@ -101,7 +101,6 @@ html,
 body {
     min-height: 100%;
     min-width: 100%;
-    height: 100%;
 }
 
 body {
@@ -128,6 +127,32 @@ header {
 .content {
     flex: 1 0 auto;
     -webkit-flex: 1 0 auto;
+}
+
+.main_page {
+    position: relative;
+}
+
+.main_page:before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: .05;
+    background-image: url(img/bottom_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.background_wrapp {
+    background-image: url(img/middle_bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
 }
 
 footer {
@@ -729,6 +754,16 @@ textarea:focus {
     background-repeat: no-repeat;
 }
 
+.callback_tel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(img/close.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /*-- /Icons --*/
 
 /*-- Pills --*/
@@ -848,7 +883,8 @@ textarea:focus {
 .header_site {
     padding-top: 4px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    background: #2A251E;
 }
 
 .header_row_1 .row {
@@ -933,6 +969,9 @@ textarea:focus {
 }
 
 .tels_list li a {
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    transition-property: color;
     font-family: "Montserrat";
     font-size: 24px;
     line-height: 29px;
@@ -1018,7 +1057,16 @@ textarea:focus {
     border-bottom: 1px dashed transparent;
 }
 
+.callback_link .circle_icon {
+    display: none;
+}
+
+.resp_btn_col {
+    display: none;
+}
+
 .main_nav_wrapp {
+    min-height: 47px;
     padding: 2px 0 11px 0;
     border-bottom: 1px solid rgba(255, 255, 255, .4);
 }
@@ -1029,10 +1077,16 @@ textarea:focus {
     justify-content: space-between;
     -webkit-justify-content: space-between;
     opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .main_nav.loaded {
     opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .main_nav li {
@@ -1237,18 +1291,34 @@ textarea:focus {
     left: 0;
 }
 
+.menu_btn {
+    display: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    background-image: url(img/down_arrow.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+
 /* ----- Responsive Menu Button ------ */
 
 .respmenubtn {
-    /*display: inline-block;*/
-    display: none;
+    display: inline-block;
+    /*display: none;*/
     vertical-align: top;
     width: 45px;
     height: 37px;
     background: transparent;
     cursor: pointer;
     position: relative;
-    top: 6px;
+    top: 15px;
     z-index: 11;
     border: 1px solid transparent;
 }
@@ -1257,7 +1327,7 @@ textarea:focus {
     display: block;
     width: 27px;
     height: 2px;
-    background: #466896;
+    background: #ffffff;
     margin: 0 auto 7px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
@@ -1330,6 +1400,20 @@ textarea:focus {
 /*-------------------------------------------*/
 
 /*-- Section 1 - Main Page --*/
+
+.sect_1 {
+    overflow: hidden;
+}
+
+.promo_slider_wrapp {
+    height: 400px;
+    overflow: hidden;
+}
+
+.promo_slider_wrapp.loaded {
+    height: auto;
+    overflow: none;
+}
 
 .promo_slider {
 
@@ -1432,19 +1516,19 @@ textarea:focus {
 }
 
 .promo_slider_controls_wrapp .col:nth-child(1) {
-    width: 30%;
+    width: 50%;
     padding-right: 10px;
     padding-left: 49px;
 }
 
 .promo_slider_controls_wrapp .col:nth-child(2) {
-    width: 70%;
+    width: 50%;
     padding-left: 10px;
     text-align: right;
 }
 
 .promo_slider_controls_wrapp .yellow_pill {
-    margin: 5px 0;
+    margin: 19px 0 5px 0;
 }
 
 .promo_slider_controls {
@@ -1514,7 +1598,6 @@ textarea:focus {
 .advantage_thumb {
     display: inline-table;
     vertical-align: top;
-    /*width: 33.33%;*/
 }
 
 .advantage_thumb .col:nth-child(1) {
@@ -1527,7 +1610,7 @@ textarea:focus {
 .advantage_thumb .col:nth-child(2) {
     display: table-cell;
     vertical-align: middle;
-    padding: 10px 0 10px 5px;
+    padding: 10px 20px 10px 5px;
     width: auto;
 }
 
@@ -1667,14 +1750,19 @@ textarea:focus {
 .thumb_2 .img_box {
     overflow: hidden;
     position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
+    top: -4px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
     opacity: .5;
 }
 
 .thumb_2 .img_box img {
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1984,6 +2072,7 @@ textarea:focus {
     background-image: url(img/shop_card.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: contain;
     opacity: .1;
     position: absolute;
     top: 0;
@@ -2110,6 +2199,7 @@ textarea:focus {
     background-color: #2A251E;
     border: 1px solid #FAB702;
     max-width: 520px;
+    float: right;
     margin-top: 28px;
     padding: 30px 11% 10px 11%;
 }
@@ -2206,7 +2296,7 @@ textarea {
 .article_4 .col:nth-child(2) {
     width: 51%;
     order: 1;
-    padding: 10px 10px 10px 0;
+    padding: 10px 25px 10px 0;
 }
 
 .article_4 .col:nth-child(1):before {
@@ -2228,7 +2318,10 @@ textarea {
 }
 
 .photo_box img {
-
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
 }
 
 /*-- /Section 8 - Main Page --*/
@@ -2401,6 +2494,7 @@ textarea {
 
 .article_1 {
     margin-top: 23px;
+    overflow: hidden;
 }
 
 .article_1 .img_box {
@@ -2553,6 +2647,7 @@ textarea {
 }
 
 .items_list li {
+    font-family: "Montserrat";
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 25px;
@@ -2883,7 +2978,7 @@ img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
 }
 
 .miniature_slider {
-
+    width: 100% !important;
 }
 
 .miniature_slider .slide {
@@ -3149,8 +3244,10 @@ img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
 }
 
 .tab_link {
+    display: inline-block;
+    vertical-align: top;
     cursor: pointer;
-    padding: 10px 2px;
+    padding: 10px 10px;
     text-align: center;
     text-transform: uppercase;
     font-family: "Open Sans", "Arial", "Verdana", sans-serif;
@@ -3342,14 +3439,27 @@ img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
 /* ----- FOOTER ------ */
 /*-------------------------------------------*/
 
+.footer_section {
+    overflow: hidden;
+}
+
 footer {
     padding: 1px 0;
 }
 
 .footer {
+    margin: 0 -5px;
+}
+
+.footer_row {
     display: flex;
     display: -webkit-flex;
     padding: 20px 0 36px 0;
+}
+
+.footer_col {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .footer_col:nth-child(1) {
@@ -3365,7 +3475,7 @@ footer {
 }
 
 .corp_p {
-    padding-top: 68px;
+    padding-top: 60px;
 }
 
 .corp_p p {
@@ -3542,20 +3652,13 @@ body.fixed {
     left: 0;
     z-index: 10;
     overflow-y: auto;
-}
-
-.popup_sect .popup_bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, .8);
+    padding: 70px 0 30px 0;
 }
 
 .popup_wrapp {
     max-width: 630px;
-    margin: 70px auto 20px auto;
+    margin: 0 auto;
     position: relative;
 }
 
