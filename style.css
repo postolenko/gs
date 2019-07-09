@@ -908,8 +908,9 @@ textarea:focus {
 }
 
 .logo {
-    display: inline-block;
-    vertical-align: top;
+/*    display: inline-block;
+    vertical-align: top;*/
+    display: block;
     max-width: 127px;
 }
 
