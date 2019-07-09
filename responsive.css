@@ -245,48 +245,6 @@
 
 	/*-- /Section 1 - Contacts Page --*/
 
-	/*-- Section 1 - Card Page --*/
-
-/*	.card_templ > .left {
-	    width: 100%;
-	    float: none;
-	    padding: 10px 0;
-	}
-
-	.card_templ > .right {
-	    width: 100%;
-	    float: none;
-	    padding: 10px 0;
-	}
-
-	.card_slider_wrapp > .left {
-	    width: 100%;
-	    float: none;
-	    padding: 10px 0;
-	}
-
-	.card_slider_wrapp > .right {
-	    width: 100%;
-	    float: none;
-	    max-width: 600px;
-		margin: 0 auto;
-	    padding: 10px 0;
-	}
-
-	.big_slider {
-	    margin: 0;
-	}
-
-	.big_slider .slide .img_box {
-	    height: 400px;
-	}
-
-	.miniature_slider .slide .miniature {
-		margin: 0 auto;
-	}*/
-
-	/*-- /Section 1 - Card Page --*/
-
 	/*-- Section 2 - Card Page --*/
 
 	.center_h h2:before {
@@ -536,20 +494,6 @@
 
 	/*-- Section 1 - Card Page --*/
 
-/*	.card_slider_wrapp > .left {
-	    width: 100%;
-	    float: none;
-	    padding: 10px 0;
-	}
-
-	.card_slider_wrapp > .right {
-	    width: 100%;
-	    float: none;
-	    max-width: 600px;
-		margin: 0 auto;
-	    padding: 0;
-	}*/
-
 	.big_slider {
 	    margin: 0;
 	}
@@ -557,16 +501,6 @@
 	.big_slider .slide .img_box {
 	    height: 360px;
 	}
-
-/*	.miniature_slider .slide .miniature {
-		margin: 0 auto;
-	}
-
-	.miniature_slider .slick-arrow {
-		background: rgba(0, 0, 0, .8);
-		top: 0;
-    	margin-top: -56px;
-	}*/
 
 	.good_descript {
 	    padding: 10px 0 0 0;
