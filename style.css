@@ -908,8 +908,6 @@ textarea:focus {
 }
 
 .logo {
-/*    display: inline-block;
-    vertical-align: top;*/
     display: block;
     max-width: 127px;
 }
@@ -2868,6 +2866,8 @@ img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
 }
 
 .big_slider {
+/*    width: calc(100% - 100px) !important;
+    float: right;*/
     margin: 17px 0;
 }
 
@@ -2893,7 +2893,7 @@ img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
 }
 
 .big_slider .owl-wrapper-outer {
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .big_slider .owl-controls {
@@ -2923,10 +2923,6 @@ img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
 
 .big_slider .owl-page+.owl-page {
     margin-top: 20px;
-}
-
-.big_slider .owl-page span {
-    display: none !important;
 }
 
 /*-------------*/

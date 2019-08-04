@@ -226,15 +226,24 @@ $(document).ready(function() {
     // -- Card Slider
 
     if($(".big_slider").length > 0) {
-
+        var imgPath;
         $('.big_slider').owlCarousel({
             slideSpeed: 300,
             paginationSpeed: 400,
             singleItem: true,
             afterInit: makePages,
             afterUpdate: makePages,
-            nav: true,
-            loop: true
+            // dotsContainer: "owl-controls",
+            nav: false,
+            loop: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
         });
 
         function makePages() {
@@ -245,6 +254,12 @@ $(document).ready(function() {
                         'background-size': 'cover'
                     });
             });
+
+            // $(this).find(".slide").each(function() {
+            //     imgPath = $(this).find("img").attr('src');
+
+            // });
+
         }
 
     }

@@ -203,9 +203,6 @@ $(document).ready(function() {
                     }
                 });
                 $(this).addClass("active");
-                // tabsParent.find(".tabs_content").css({
-                //     "min-height" : $(this).find(".tab_link").eq(indexActiveTab).height() + "px"
-                // });
             }
         });
     }
@@ -222,23 +219,7 @@ $(document).ready(function() {
             appendArrows: $(".promo_slider_controls"),
             appendDots: $(".promo_slider_controls"),
             prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><img src="img/left_arrow_2.svg"></button>',
-            nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="img/right_arrow_2.svg"></button>',
-            // responsive: [
-            //     {
-            //       breakpoint: 900,
-            //       settings: {
-            //         slidesToShow: 2,
-            //         slidesToScroll: 1
-            //       }
-            //     },
-            //     {
-            //       breakpoint: 620,
-            //       settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1
-            //       }
-            //     }
-            // ]
+            nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="img/right_arrow_2.svg"></button>'
         });
     }
 
