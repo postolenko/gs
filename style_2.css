@@ -75,7 +75,7 @@
 .goods_card_scrollbar {
 	margin: 24px 0 18px 0;
 	width: calc(100% + 7px);
-    height: 361px;
+    max-height: 361px;
 }
 
 .goods_card_scrollbar .mCustomScrollBox {
@@ -245,10 +245,680 @@
 
 /*-- /Card Popup --*/
 
+/*-- Section 1 - Card 2 Page --*/
+
+.inner_page_h2 {
+	position: relative;
+	padding-left: 30px;
+}
+
+.inner_page_h2:before {
+	display: block;
+	content: "";
+	width: 10px;
+	height: 100%;
+	background-color: #FAB702;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.inner_page_h2 h1 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: bold;
+}
+
+.card_table {
+    margin: 55px 0 38px 0;
+}
+
+.card_table .table_row {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	width: 100%;
+	padding: 13px 0;
+	border-bottom: 1px solid #898683;
+}
+
+.card_table .table_row .table_cell {
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px 10px;
+}
+
+.card_table .table_row .table_cell:nth-child(1) {
+	width: 80px;
+}
+
+.card_table .table_row .table_cell:nth-child(2) {
+	width: calc(100% - 446px);
+	padding-left: 5px;
+}
+
+.card_table .table_row .table_cell:nth-child(3) {
+	width: 106px;
+}
+
+.card_table .table_row .table_cell:nth-child(4) {
+	width: 100px;
+	text-align: center;
+}
+
+.card_table .table_row .table_cell:nth-child(5) {
+	width: 120px;
+}
+
+.card_table .table_row .table_cell:nth-child(6) {
+	width: 40px;
+	text-align: right;
+}
+
+.card_table .img_box {
+
+}
+
+.card_table .img_box img {
+	display: block;
+	width: auto;
+	height: all;
+	max-width: 98%;
+	max-height: 98%;
+}
+
+.card_table p {
+	font-family: "Montserrat";
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.card_table .descript p {
+	font-family: "DIN Pro";
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+}
+
+.count_box {
+	width: 70px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	padding: 0 10px;
+	border: 1px solid #707070;
+	background-color: #FFFFFF;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+
+.count_num {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+}
+
+.count_num input {
+	width: 100%;
+	height: 32px;
+	text-align: center;
+	font-family: "Montserrat";
+	font-size: 16px;
+	line-height: 30px;
+	color: #000;
+	font-weight: bold;
+}
+
+.count_num input::placeholder {
+	color: #000;
+}
+
+.btns_wrapp {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	padding-top: 1px;
+}
+
+.minus_btn {
+	display: block;
+	cursor: pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	width: 30px;
+	height: 15px;
+}
+
+.plus_btn {
+	display: block;
+	cursor: pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	width: 30px;
+	height: 15px;
+}
+
+.up_chevron {
+	display: block;
+	height: 12px;
+	width: 100%;
+	background-color: transparent;
+	background-image: url(img/up_chevron.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+}
+
+.down_chevron {
+	display: block;
+	height: 12px;
+	width: 100%;
+	background-color: transparent;
+	background-image: url(img/down_chevron.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+}
+
+.del_btn_2 {
+	/*display: block;*/
+	display: inline-block;
+	vertical-align: top;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	border: none;
+	background-color: transparent; 
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(img/close_x_white.svg);
+}
+
+.total_sum_wrapp {
+	width: 100%;
+	max-width: 366px;
+}
+
+.total_sum_sect .total_sum_wrapp {
+	float: right;
+}
+
+.total_sum_wrapp h3 {
+	font-size: 24px;
+	line-height: 29px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.total_sum_table {
+	display: table;
+	width: 100%;
+	margin-top: 16px;
+	border-collapse: collapse;
+}
+
+.total_sum_table .table_row {
+	display: table-row;
+	vertical-align: top;
+	border-bottom: 1px solid #707070;
+}
+
+.total_sum_table .table_cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.total_sum_table .table_cell:nth-child(1) {
+	width: 51%;
+	padding: 17px 5px 17px 0;
+}
+
+.total_sum_table .table_cell:nth-child(2) {
+	width: 49%;
+	padding: 17px 0 17px 5px;
+}
+
+.total_sum_table p {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal;
+}
+
+.total_sum_table .table_cell:nth-child(2) p {
+	font-family: "Montserrat";
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: bold;
+}
+
+.pill_wrapp {
+
+}
+
+.pill_wrapp a {
+	width: 100%;
+}
+
+/*-- /Section 1 - Card 2 Page --*/
+
+/*-- Section 1 - Payment Details --*/
+
+.inner_page_h2 h2 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: bold;
+}
+
+.card_form {
+
+}
+
+.card_form .left {
+	width: 50%;
+	padding: 10px 6% 10px 0;
+}
+
+.card_form .right {
+	width: 50%;
+	padding: 10px 0 10px 6%;
+}
+
+.input_placeholder {
+	margin-top: 20px;
+	position: relative;
+}
+
+.input_placeholder label {
+	font-family: "Montserrat";
+	font-size: 16px;
+	color: #A6A6A6;
+	position: absolute;
+	top: 27px;
+	left: 0;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+
+.input_placeholder input,
+.input_placeholder textarea {
+	border-bottom: 1px solid #A6A6A6;
+	font-family: "Montserrat";
+	font-size: 16px;
+}
+
+.input_placeholder.active label {
+	display: none;
+}
+
+.two_cols_templ {
+    margin: 45px 0 16px 0;
+}
+
+.two_cols_templ .left {
+	width: 50%;
+	padding: 10px 6% 10px 0;
+}
+
+.two_cols_templ .right {
+	width: 50%;
+	padding: 10px 0 10px 6%;
+}
+
+.two_cols_templ .inner_page_h2 {
+    margin-bottom: 58px;
+}
+
+.card_table_2 {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.card_table_2 .table_row {
+	display: table-row;
+	border-bottom: 1px solid #898683;
+}
+
+.card_table_2 .table_row .table_cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.card_table_2 .table_row .table_cell:nth-child(1) {
+	width: 99px;
+	padding: 16px 10px 2px 0;
+}
+
+.card_table_2 .table_row .table_cell:nth-child(2) {
+	width: auto;
+	padding: 20px 0 2px 10px;
+}
+
+.card_table_2 .img_box {
+	max-width: 80px;
+}
+
+.card_table_2 .img_box img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 98%;
+	max-height: 98%;
+}
+
+.card_table_2 p {
+	padding: 9px 0;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+}
+
+.card_table_2 p.price {
+	font-family: "Montserrat";
+	font-weight: bold;
+}
+
+.article_5 {
+
+}
+
+.article_5 p {
+	padding: 7px 0;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+}
+
+.checkbox {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 27px 0 0 0;
+	padding-left: 50px;
+}
+
+.checkbox input {
+	width: 1px;
+	height: 1px;
+	border: none;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+}
+
+.checkbox label {
+	cursor: pointer;
+	padding: 3px 0 0 0;
+    font-family: "DIN Pro";
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: normal;
+    position: relative;
+}
+
+.checkbox label:before {
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: "";
+	background-color: #ffffff;
+	border: 1px solid #707070;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: -50px;
+}
+
+.checkbox label:after {
+	display: block;
+	content: "";
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    background-color: #FAB702;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: -45px;
+}
+
+.checkbox input:checked + label:after {
+	opacity: 1;
+}
+
+.yellow_star {
+	font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 24px;
+    color: #FAB702;
+    font-weight: bold;
+}
+
+.link_3 {
+	font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.link_3:link, 
+.link_3:visited {
+	border-bottom: 1px solid #FAB702;
+}
+
+.link_3:active, 
+.link_3.active {
+	border-bottom: 1px solid transparent;
+}
+
+.link_3:hover {
+	border-bottom: 1px solid transparent;
+}
+
+label .yellow_star {
+	position: relative;
+	left: 2px;
+}
+
+.yellow_pill_wrapp_2 {
+	padding: 26px 0 41px 0;
+	text-align: center;
+}
+
+.yellow_pill_wrapp_2 .yellow_pill {
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+	min-width: 366px;
+}
+
+/*-- /Section 1 - Payment Details --*/
+
+/*-- Section 1 - Checked Icon --*/
+
+.thanks_sect {
+	max-width: 860px;
+	margin: 0 auto;
+}
+
+.thanks_wrapp {
+	margin-bottom: 20px;
+}
+
+.cheched_icon {
+	width: 64px;
+	height: 64px;
+	margin: 15px auto;
+	position: relative;
+	border: 1px solid #FAB702;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.cheched_icon img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 98%;
+	max-height: 98%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.thanks_wrapp h3 {
+	padding: 12px 0;
+	text-align: center;
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: bold;
+}
+
+.thanks_thumbs {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+    margin: 42px -2%;
+}
+
+.thank_thumb {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+    padding: 0 5%;
+}
+
+.thank_thumb:before {
+	content: "";
+	width: 1px;
+	height: 100%;
+	background-color: #707070;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.thank_thumb:nth-child(1):before {
+	display: none;
+}
+
+.thank_thumb h3 {
+	padding-bottom: 16px;
+	font-family: "Din Pro";
+	font-size: 16px;
+	line-height: 24px;
+	color: #E8E8E8;
+	font-weight: normal;
+}
+
+.thank_thumb p {
+	font-family: "Montserrat";
+	font-size: 16px;
+	line-height: 24px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.thank_thumb .inner {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+.card_table_3_wrapp {
+    margin: 100px 0 52px 0;
+}
+
+.card_table_3 {
+    margin: 10px 0;
+}
+
+.card_table_3 .table_row {
+	display: flex;
+	display: -webkit-flex;
+	width: 100%;
+	align-items: center;
+    -webkit-align-items: center;
+    border-bottom: 1px solid #A6A6A6;
+}
+
+.card_table_3 .table_row .table_cell {
+	display: inline-block;
+	padding: 19px 10px;
+}
+
+.card_table_3 .table_row .table_cell:nth-child(1) {
+	width: 115px;
+	padding-left: 0;
+}
+
+.card_table_3 .table_row .table_cell:nth-child(2) {
+	width: calc(100% - 265px);
+}
+
+.card_table_3 .table_row .table_cell:nth-child(3) {
+	width: 150px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.card_table_3 .img_box {
+	width: 80px;
+}
+
+.card_table_3 .img_box img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+.price {
+	font-family: "Montserrat";
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.card_table_3_wrapp .total_sum_wrapp {
+    margin-top: 32px;
+}
+
+/*-- /Section 1 - Checked Icon --*/
+
 
 @media only screen and (max-width: 900px) {
 
 	/*-- Card Popup --*/
+
+	.goods_card_scrollbar {
+	    max-height: 240px;
+	}
 
 	.card_sect .card_popup {
 		right: auto;
@@ -273,7 +943,7 @@
 	}
 
 	.goods_card_scrollbar {
-	    height: 140px;
+	    max-height: 140px;
 	    margin: 10px 0;
 	}
 
@@ -297,5 +967,46 @@
 	}
 
 	/*-- /Card Popup --*/
+
+	/*-- Section 1 - Card 2 Page --*/
+
+	.card_table {
+	    margin: 25px 0;
+	}
+
+	/*-- /Section 1 - Card 2 Page --*/
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	/*-- Section 1 - Card 2 Page --*/
+
+	.card_table {
+	    margin: 23px 0 26px 0;
+	}
+
+	.card_table .table_row {
+	    display: block;
+	    /*align-items: center;*/
+/*	    -webkit-align-items: center;
+	    justify-content: center;
+	    -webkit-justify-content: center;*/
+	    /*width: 100%;*/
+	    flex-wrap: wrap;
+	    -webkit-flex-wrap: wrap;
+/*	    padding: 13px 0;
+	    border-bottom: 1px solid #898683;*/
+	}
+
+	.card_table .table_row .table_cell:nth-child(1) {
+	    width: 80px;
+	}
+
+	.card_table .table_row .table_cell:nth-child(2) {
+	    width: calc(100% - 100px);
+	}
+
+	/*-- /Section 1 - Card 2 Page --*/
 
 }
