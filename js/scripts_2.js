@@ -19,7 +19,6 @@ $(document).ready(function() {
         parentBlock = $(this).closest(".count_box");
         cardRow = parentBlock.closest(".table_row");
         priceValEl = cardRow.find(".price_val");
-        // priceVal = parseFloat( priceValEl.text() );
         priceVal = parseFloat(priceValEl.text().replace(',', '.'));
         countInput = parentBlock.find(".count_num input");
         countVal = countInput.val();

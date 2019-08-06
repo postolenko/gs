@@ -320,10 +320,6 @@
 	text-align: right;
 }
 
-.card_table .img_box {
-
-}
-
 .card_table .img_box img {
 	display: block;
 	width: auto;
@@ -503,10 +499,6 @@
 	font-weight: bold;
 }
 
-.pill_wrapp {
-
-}
-
 .pill_wrapp a {
 	width: 100%;
 }
@@ -519,10 +511,6 @@
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: bold;
-}
-
-.card_form {
-
 }
 
 .card_form .left {
@@ -629,10 +617,6 @@
 .card_table_2 p.price {
 	font-family: "Montserrat";
 	font-weight: bold;
-}
-
-.article_5 {
-
 }
 
 .article_5 p {
