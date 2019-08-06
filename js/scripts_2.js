@@ -40,7 +40,7 @@ $(document).ready(function() {
     	cardRow = $(this).closest(".table_row");
     	countVal = $(this).val();
     	priceValEl = cardRow.find(".price_val");
-        priceVal = parseInt( priceValEl.text() );
+        priceVal = parseFloat(priceValEl.text().replace(',', '.'));
         cardRow.find(".price_total_val").text(priceVal * countVal);
     });
 

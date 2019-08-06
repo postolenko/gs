@@ -911,6 +911,9 @@ label .yellow_star {
 
 /*-- /Section 1 - Checked Icon --*/
 
+input[type="mumber"]::-ms-input-placeholder {
+	color: #000000;
+}
 
 @media only screen and (max-width: 900px) {
 
